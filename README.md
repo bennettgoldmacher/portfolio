@@ -1,5 +1,4 @@
-[index (17).html](https://github.com/user-attachments/files/26860696/index.17.html)
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -246,7 +245,6 @@
     text-transform: uppercase;
     color: var(--gray);
   }
-
   /* WORK */
   .work {
     padding: 8rem 3rem;
