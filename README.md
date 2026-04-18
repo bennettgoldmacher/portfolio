@@ -1,4 +1,5 @@
-
+[index (17).html](https://github.com/user-attachments/files/26860696/index.17.html)
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -55,6 +56,7 @@
     display: flex;
     gap: 2.5rem;
     list-style: none;
+    align-items: center;
   }
 
   .nav-links a {
