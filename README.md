@@ -1,5 +1,4 @@
-[index (16).html](https://github.com/user-attachments/files/26860530/index.16.html)
-# portfolio<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
