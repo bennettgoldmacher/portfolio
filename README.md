@@ -245,6 +245,7 @@
     text-transform: uppercase;
     color: var(--gray);
   }
+
   /* WORK */
   .work {
     padding: 8rem 3rem;
@@ -833,6 +834,19 @@
     max-width: 480px;
   }
 
+  .modal-slogan {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    background: rgba(200,169,110,0.06);
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
+
   .modal-academic {
     display: inline-flex;
     align-items: center;
@@ -970,7 +984,7 @@
         <div>
           <div class="academic-badge">Academic Project · Northeastern University</div>
           <div class="project-brand">Burberry</div>
-          <div class="project-tagline">Luxury repositioning</div>
+          <div class="project-tagline">"Making the Aspirational Attainable"</div>
           <div class="project-tags">
             <span class="tag">Luxury</span>
             <span class="tag">Fashion</span>
@@ -1017,7 +1031,7 @@
         <div>
           <div class="academic-badge">Academic Project · Northeastern University</div>
           <div class="project-brand">Boxed Water</div>
-          <div class="project-tagline">The Intentional Consumer</div>
+          <div class="project-tagline">"Think Outside the Box"</div>
           <div class="project-tags">
             <span class="tag">Sustainability</span>
             <span class="tag">CPG</span>
@@ -1147,6 +1161,7 @@ const projects = {
   cuties: {
     brand: 'Cuties',
     title: 'Spark Your Potential',
+    slogan: 'Spark Your Potential',
     body: `People settle. They find a routine, they get comfortable, and before they know it they stop pushing themselves. That was the tension we built this whole campaign around. Cuties mandarins are natural, portable, and actually give you energy, so we wanted to position them as the thing that sparks you back into action. The brand's purpose became awakening dormant potential in people who are tired of just going through the motions.
 
 The target audience is defined by mindset, not age. These are people who refuse to settle into one routine and need something to remind them of that.`,
@@ -1160,21 +1175,25 @@ The target audience is defined by mindset, not age. These are people who refuse 
   },
   burberry: {
     brand: 'Burberry',
-    title: 'Luxury Repositioning Strategy',
-    body: `Burberry has over 150 years of heritage and some of the most recognizable brand codes in fashion. The trench coat, the check pattern, the Equestrian Knight. The challenge we found interesting was figuring out how to honor all of that while still making the brand feel relevant to a younger audience without watering it down.
+    title: 'The Knights Trial Program',
+    slogan: 'Making the Aspirational Attainable',
+    body: `Burberry has over 150 years of heritage and some of the most recognizable brand codes in fashion. The trench coat, the check pattern, the Equestrian Knight. The challenge we found interesting was figuring out how to honor all of that while still making the brand feel relevant to a younger audience without watering it down. The answer was not a rebrand. It was a program.
 
-The goal was to keep Burberry aspirational but make it feel like something a younger luxury consumer actually connects with, not just something their parents wore.`,
-    strategy: `Our strategy focused on selective collaborations, editorial storytelling, and experiential retail. We wanted every touchpoint to feel intentional and rooted in the brand's story rather than chasing trends. The idea was that Burberry does not need to reinvent itself, it just needs to remind people why it matters and let the right creative moments do that work.`,
+We created the Knights Trial, a lifelong loyalty program where you work toward earning a full Burberry trench coat by hitting major life milestones. The idea is that aspiration is not just a feeling, it is something you earn over time.`,
+    strategy: `Here is how the Knights Trial works. Every time you hit a significant life milestone, Burberry sends you an authenticated piece of fabric. Three fabrics become a scarf. Four more fabrics and your scarf earn you a jacket. A jacket and three more fabrics earn you the final trench coat. Every single piece comes with a certificate of authenticity, a thread specially woven into the fabric that is only identifiable under a microscope, and signature embroidery. To keep it exclusive no one can receive more than two pieces in a month or five in a year.
+
+The milestones include getting your driver's license, graduating high school, getting into your dream school, graduating college, landing your first job, earning a big promotion, getting married, having your first kid, buying a home, and the tenth and final milestone is receiving the full trench coat. The final delivery arrives in a Burberry box with a sunset lamp inside, designed to feel like a moment, like opening something that means something. We presented the program through a live skit where a narrator walked through each life stage while a character sitting at one desk received each Burberry piece, with two supporting actors bringing out the items at every milestone.`,
     metrics: [
       { num: '150+', label: 'Years of heritage' },
-      { num: 'Gen Z', label: 'Target audience shift' },
+      { num: '10', label: 'Life milestones' },
       { num: 'Global', label: 'Campaign scope' },
     ],
-    tags: ['Luxury', 'Fashion', 'Brand Identity', 'Repositioning', 'Heritage']
+    tags: ['Luxury', 'Fashion', 'Loyalty Program', 'Brand Identity', 'Heritage']
   },
   lego: {
     brand: 'LEGO',
     title: 'Ignore the Instructions',
+    slogan: 'Ignore the Instructions',
     body: `Adults are constantly told to follow the rules, be productive, and stay in line. LEGO has always been a product that pushes back on that but their marketing was not really saying it out loud. We wanted to build a campaign that gave adults permission to just build whatever they want with no plan and no pressure.
 
 The big idea came from the most obvious place possible. What if LEGO told you to throw away the instruction manual? That is the campaign.`,
@@ -1189,6 +1208,7 @@ The big idea came from the most obvious place possible. What if LEGO told you to
   boxed: {
     brand: 'Boxed Water',
     title: 'The Intentional Consumer',
+    slogan: 'Think Outside the Box',
     body: `This campaign was not really about sustainability in the traditional sense. We were not trying to guilt anyone into making a switch. The people we were going after already think of themselves as intentional. Every purchase they make, every brand they support, every product on their desk or in their bag says something about who they are. They are the kind of people who notice details, do their research, and make choices with purpose.
 
 Boxed Water fits that identity perfectly. It is clean, it is considered, and it signals something about the person holding it without them having to say a word.`,
@@ -1221,6 +1241,7 @@ function openModal(key) {
   document.getElementById('modal-body').innerHTML = `
     <div class="modal-brand">${p.brand}</div>
     <h3 class="modal-title">${p.title}</h3>
+    ${p.slogan ? `<div class="modal-slogan">"${p.slogan}"</div>` : ''}
     <div class="modal-academic">Academic Case Study · D'Amore-McKim School of Business, Northeastern University</div>
     <div class="project-tags" style="margin-bottom:1rem;">
       ${p.tags.map(t => `<span class="tag" style="color:#666;border-color:rgba(0,0,0,0.15);">${t}</span>`).join('')}
